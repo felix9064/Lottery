@@ -12,7 +12,8 @@
 
 # IntelliJ IDEA Project Files #
 *.iml
-*/.idea/
+.idea/
+out/
 
 # Package Files #
 *.jar
