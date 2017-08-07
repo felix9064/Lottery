@@ -13,7 +13,6 @@
             </dataSource>
         </environment>
     </environments>
-
     <mappers>
         <mapper resource="com/felix/lottery/mapping/LotteryMapper.xml" />
     </mappers>
