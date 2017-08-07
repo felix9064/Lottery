@@ -2,7 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.felix.lottery.mapping.LotteryMapper">
-    <select id="getKaijhm" parameterType="String" resultType="com.felix.lottery.bean.DoubleColorBall">
+    <select id="getKaijhm" parameterType="String" resultType="com.felix.lottery.bean.Kaijhm">
         SELECT * FROM SSQ_KAIJHM WHERE KAIJQS=#{kaijqs};
     </select>
+    
+    <insert id="insertAnalyze" parameterType="com.felix.lottery.bean.Analyze">
+        INSERT INTO SSQ_ANALYZE
+        (KAIJQS, REDSUM, JISHUS, OUSHUS, EQLAST, LIANXH)
+        VALUES
+        (#{kaijqs}, #{redsum}, #{jishus}, #{oushus}, #{eqlast}, #{lianxh});
+    </insert>
 </mapper>
